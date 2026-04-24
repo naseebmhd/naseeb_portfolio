@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of [Your Name] — developer specializing in clean code and thoughtful systems.">
+    <title>[Your Name] · Developer Portfolio</title>
+    <style>
+        /* ========================================
+           MODERN PROFESSIONAL PORTFOLIO
+           Minimal · Elegant · Readable
+        ======================================== */
+
+        /* Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .subhead {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 4rem 0 3rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: #f4f4f4;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 400;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 2.5rem;
+        }
+
+        .project-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title h3 {
+            margin-bottom: 0;
+        }
+
+        .project-year {
+            font-size: 0.8rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .project-tech {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.75rem;
+            font-family: 'SF Mono', 'JetBrains Mono', monospace;
+        }
+
+        .project-description {
+            color: #444;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .project-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+
+        .project-links a:hover {
+            border-bottom-color: #000;
+        }
+
+        /* About */
+        .about-text {
+            color: #444;
+            max-width: 650px;
+        }
+
+        /* Contact */
+        .contact-block {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .contact-block p {
+            color: #555;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: #1a1a1a;
+            color: white;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .contact-button:hover {
+            background: #333;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 0 3rem 0;
+            text-align: center;
+            color: #888;
+            font-size: 0.8rem;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+            header {
+                padding: 2rem 0 1.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subhead {
+                font-size: 1rem;
+            }
+            section {
+                padding: 2rem 0;
+            }
+            .project-title {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                color: black;
+            }
+            .contact-button, .project-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Muhammad Naseeb</h1>
+        <div class="subhead">Software Developer — building thoughtful, well-crafted systems</div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Work / Projects Section -->
+    <section id="work">
+        <h2>Selected work</h2>
+
+        <div class="project">
+            <div class="project-title">
+                <h3>IoT-based autonomous infrastructure and revenue management system with real-time device control and QR-based payment integration.</h3>
+                <span class="project-year">2025-26</span>
+            </div>
+            <div class="project-tech">Html · CSS · JavaScript · Python · Django · Flask · Arduino (Embedded C/C++) · SQL (MySQL) · REST APIs (HTTP)</div>
+            <div class="project-description">
+                Built an IoT-based automation system that enables pay-per-use access to infrastructure through QR-based payments. It solves the problem of manual supervision and inefficient resource usage by automatically controlling devices based on user-selected time, with real-time monitoring and scheduling via a web dashboard. 
+                 — "Automated infrastructure control, eliminating manual supervision and enabling real-time revenue generation."
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/naseebmhd/QuadMatrix2026">GitHub</a>
+                <a href="#">Live demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <h3>Smart Task Manager </h3>
+                <span class="project-year">2026</span>
+            </div>
+            <div class="project-tech">HTML · CSS · JavaScript (Local Storage API)</div>
+            <div class="project-description">
+                <p>
+Developed a Smart Task Manager web application to help users efficiently manage daily tasks. 
+The application allows users to add, delete, and mark tasks as completed, with data persistence 
+using the browser’s Local Storage API.
+
+Built using HTML, CSS, and JavaScript, the project focuses on dynamic UI updates, user-friendly 
+interactions, and responsive design. Key features include task filtering (all, completed, pending), 
+real-time task counter, and input validation.
+
+This project demonstrates strong fundamentals in DOM manipulation, state management, and building 
+interactive web applications without external frameworks.
+</p>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/naseebmhd/todo-app">GitHub</a>
+                <a href="https://naseeb-todo-app.netlify.app/">Live demo</a>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <!-- Skills Section -->
+   <section id="skills">
+    <h2>Technical competencies</h2>
+    
+    <div style="margin-bottom: 1.5rem;">
+        <div style="font-weight: 500; margin-bottom: 0.5rem; color: #333;">Web & Backend</div>
+        <div class="skills-grid">
+            <span class="skill-tag">Full Stack (HTML/CSS/JS/Python)</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">MySQL</span>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+        <div style="font-weight: 500; margin-bottom: 0.5rem; color: #333;">IoT & Embedded</div>
+        <div class="skills-grid">
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Sensor Integration</span>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 1.5rem;">
+        <div style="font-weight: 500; margin-bottom: 0.5rem; color: #333;">Payments & Engineering</div>
+        <div class="skills-grid">
+            <span class="skill-tag">Razorpay</span>
+            <span class="skill-tag">QR Systems</span>
+            <span class="skill-tag">SDLC / Agile</span>
+            <span class="skill-tag">Unit / Integration Testing</span>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-text">
+            <p>
+               I’m a developer focused on building practical, real-world systems that combine software and hardware to solve meaningful problems. I value clarity, simplicity, and creating solutions that are both efficient and easy to use.
+            </p>
+            <p style="margin-top: 1rem;">
+                Currently focused on backend development, IoT integration, and system design. I’ve built projects that integrate web applications, microcontrollers, and digital payment systems to automate infrastructure and reduce manual effort.
+                I enjoy working at the intersection of automation and real-world applications, where software directly interacts with physical systems.
+            </p>
+            <p style="margin-top: 1rem; font-style: italic; color: #666;">
+                "Simplicity is the ultimate sophistication."
+            </p>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact">
+    <div class="contact-block">
+        <p style="margin-bottom: 0.5rem; font-size: 1rem; color: #1a1a1a;">Open to work and collaboration</p>
+        <p style="margin-bottom: 1.5rem; font-size: 0.9rem;">Whether you have a project in mind or just want to connect — reach out.</p>
+        
+        <!-- Email with copy button -->
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+            <a href="mailto:naseebkoorithodi792@gmail.com" class="contact-button">Send Email</a>
+            <button onclick="copyEmail()" style="background: transparent; border: 1px solid #1a1a1a; color: #1a1a1a; padding: 0.7rem 1.5rem; border-radius: 30px; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.2s;">
+                Copy Email
+            </button>
+        </div>
+        <p id="copyMessage" style="margin-top: 1rem; font-size: 0.8rem; color: #4bb543; display: none;">✓ Email copied to clipboard!</p>
+    </div>
+</section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/naseebmhd">GitHub</a>
+            <a href="https://www.linkedin.com/in/muhammad-naseeb-114523216/">LinkedIn</a>
+            <a href="mailto:naseebkoorithodi792@gmail.com">Email</a>
+        </div>
+        <div>© 2026 Muhammad Naseeb</div>
+    </footer>
+</div>
+<script>
+    function copyEmail() {
+        const email = "naseebkoorithodi792@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            const msg = document.getElementById("copyMessage");
+            msg.style.display = "block";
+            setTimeout(() => {
+                msg.style.display = "none";
+            }, 2000);
+        });
+    }
+</script>
+</body>
+</html>
