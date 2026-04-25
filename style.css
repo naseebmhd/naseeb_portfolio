@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
 }
 
+/* Header */
 header {
     text-align: center;
     margin-bottom: 3rem;
@@ -48,12 +49,16 @@ h1 {
     text-decoration: none;
     margin: 0 0.75rem;
     font-weight: 500;
+    transition: color 0.2s;
 }
 
-.links a:hover {
+.links a:hover,
+.links a:focus {
     color: #00d4ff;
+    outline: none;
 }
 
+/* Sections */
 section {
     margin-bottom: 2.5rem;
 }
@@ -65,6 +70,7 @@ h2 {
     padding-left: 1rem;
 }
 
+/* Skills */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -77,20 +83,29 @@ h2 {
     border-radius: 20px;
     font-size: 0.85rem;
     border: 1px solid #2a2a2a;
+    transition: all 0.2s;
 }
 
+.skills span:hover {
+    border-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+/* Project Cards */
 .project-card {
     background: #111;
     border: 1px solid #222;
     border-radius: 12px;
     padding: 1.25rem;
     margin-bottom: 1.25rem;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
     border-color: #7c3aed;
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-card h3 {
@@ -112,12 +127,17 @@ h2 {
     text-decoration: none;
     font-size: 0.9rem;
     margin-right: 1rem;
+    transition: color 0.2s;
 }
 
-.project-links a:hover {
+.project-links a:hover,
+.project-links a:focus {
+    color: #00d4ff;
     text-decoration: underline;
+    outline: none;
 }
 
+/* Contact Section */
 .contact {
     text-align: center;
     background: #111;
@@ -135,14 +155,86 @@ h2 {
     border-radius: 8px;
     margin-top: 1rem;
     font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s, transform 0.1s;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background: #6d28d9;
+    transform: translateY(-2px);
+    outline: none;
 }
 
-/* Mobile */
+.button:active {
+    transform: translateY(0);
+}
+
+/* Copy Email Button (if you add one) */
+.copy-btn {
+    background: transparent;
+    border: 1px solid #7c3aed;
+    color: #7c3aed;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover,
+.copy-btn:focus {
+    background: #7c3aed;
+    color: white;
+    outline: none;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
-    h1 { font-size: 1.8rem; }
-    .container { padding: 0 0.5rem; }
+    h1 { 
+        font-size: 1.8rem; 
+    }
+    
+    .container { 
+        padding: 0 0.5rem; 
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .project-links a {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .project-card {
+        background: white;
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+    
+    .links a, .project-links a, .button {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .skills span {
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }
